@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "CapacitorPluginAppTrackingTransparency",
     platforms: [
-        .iOS(.v12)
+        .iOS(.v14)
     ],
     products: [
         .library(
@@ -13,19 +13,22 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/ionic-team/capacitor-ios.git", from: "4.3.0")
+        .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", exact: "7.0.0")
     ],
     targets: [
         .target(
             name: "CapacitorPluginAppTrackingTransparency",
             dependencies: [
-                .product(name: "Capacitor", package: "capacitor-ios")
+                .product(name: "Capacitor", package: "capacitor-swift-pm")
             ],
             path: "ios/Plugin",
             sources: ["AppTrackingTransparencyPlugin.swift", "AppTrackingTransparency.swift", "AppTrackingTransparencyPlugin.m"],
             publicHeadersPath: ".",
             cSettings: [
                 .headerSearchPath(".")
+            ],
+            linkerSettings: [
+                .linkedFramework("AppTrackingTransparency")
             ]
         )
     ]

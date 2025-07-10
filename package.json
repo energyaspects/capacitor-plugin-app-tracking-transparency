@@ -1,6 +1,6 @@
 {
   "name": "@energyaspects/capacitor-plugin-app-tracking-transparency",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "description": "Capacitor plugin to request user authorization to access app-related data for tracking the user or the device.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -58,9 +58,9 @@
     "test": "echo \"TODO: implement tests\""
   },
   "devDependencies": {
-    "@capacitor/core": "^4.3.0",
+    "@capacitor/core": "^7.0.0",
     "@capacitor/docgen": "^0.2.0",
-    "@capacitor/ios": "^4.3.0",
+    "@capacitor/ios": "^7.0.0",
     "@ionic/eslint-config": "^0.3.0",
     "@ionic/prettier-config": "3.0.0",
     "@ionic/swiftlint-config": "^1.1.2",
@@ -72,7 +72,7 @@
     "typescript": "~4.0.3"
   },
   "peerDependencies": {
-    "@capacitor/core": ">= 3.0.0"
+    "@capacitor/core": "^7.0.0"
   },
   "prettier": "@ionic/prettier-config",
   "swiftlint": "@ionic/swiftlint-config",
