@@ -28,6 +28,7 @@ For plugin version 1.x.x docs please refer to [branch v1](https://github.com/mah
 
 ### 2.0.10
 - Added support for auto-registration with Swift Package Manager (SPM) via the CAPBridgedPlugin protocol
+- Updated package name in Package.swift to align with EnergyAspects naming conventions
 - Plugin can now be used without manual registration in PluginRegistration.swift when using SPM
 
 ## Maintainers
