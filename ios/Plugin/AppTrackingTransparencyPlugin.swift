@@ -3,7 +3,14 @@ import Capacitor
 import AppTrackingTransparency
 
 @objc(AppTrackingTransparencyPlugin)
-public class AppTrackingTransparencyPlugin: CAPPlugin {
+public class AppTrackingTransparencyPlugin: CAPPlugin, CAPBridgedPlugin {
+    public let identifier = "AppTrackingTransparencyPlugin"
+    public let jsName = "AppTrackingTransparency"
+    public let pluginMethods: [CAPPluginMethod] = [
+        CAPPluginMethod(name: "getStatus", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "requestPermission", returnType: CAPPluginReturnPromise)
+    ]
+    
     private let implementation = AppTrackingTransparency()
 
     @objc func getStatus(_ call: CAPPluginCall) {

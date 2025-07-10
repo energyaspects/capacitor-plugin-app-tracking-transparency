@@ -24,6 +24,12 @@ iOS only but with web fallback for development purposes.
 
 For plugin version 1.x.x docs please refer to [branch v1](https://github.com/mahnuh/capacitor-plugin-app-tracking-transparency/tree/v1).
 
+## Changelog
+
+### 2.0.10
+- Added support for auto-registration with Swift Package Manager (SPM) via the CAPBridgedPlugin protocol
+- Plugin can now be used without manual registration in PluginRegistration.swift when using SPM
+
 ## Maintainers
 
 | Maintainer | GitHub                                    | Social                                        |
