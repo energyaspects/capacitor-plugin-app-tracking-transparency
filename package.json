@@ -1,6 +1,6 @@
 {
   "name": "@energyaspects/capacitor-plugin-app-tracking-transparency",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "Capacitor plugin to request user authorization to access app-related data for tracking the user or the device.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -31,10 +31,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mahnuh/capacitor-plugin-app-tracking-transparency.git"
+    "url": "git+https://github.com/energyaspects/capacitor-plugin-app-tracking-transparency.git"
   },
   "bugs": {
-    "url": "https://github.com/mahnuh/capacitor-plugin-app-tracking-transparency/issues"
+    "url": "https://github.com/energyaspects/capacitor-plugin-app-tracking-transparency/issues"
   },
   "keywords": [
     "capacitor",
