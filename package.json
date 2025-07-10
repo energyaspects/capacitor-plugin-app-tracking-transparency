@@ -1,6 +1,6 @@
 {
-  "name": "capacitor-plugin-app-tracking-transparency",
-  "version": "2.0.5",
+  "name": "@energyaspects/capacitor-plugin-app-tracking-transparency",
+  "version": "2.0.6",
   "description": "Capacitor plugin to request user authorization to access app-related data for tracking the user or the device.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -12,7 +12,8 @@
   "files": [
     "dist/",
     "ios/Plugin/",
-    "CapacitorPluginAppTrackingTransparency.podspec"
+    "CapacitorPluginAppTrackingTransparency.podspec",
+    "Package.swift"
   ],
   "author": "Manuel Heidrich",
   "contributors": [
@@ -82,5 +83,8 @@
     "ios": {
       "src": "ios"
     }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
