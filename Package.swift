@@ -2,11 +2,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "CapacitorPluginAppTrackingTransparency",
+    name: "EnergyaspectsCapacitorPluginAppTrackingTransparency",
     platforms: [.iOS(.v14)],
     products: [
         .library(
-            name: "CapacitorPluginAppTrackingTransparency",
+            name: "EnergyaspectsCapacitorPluginAppTrackingTransparency",
             targets: ["AppTrackingTransparencySwift"]
         ),
     ],
@@ -14,11 +14,11 @@ let package = Package(
         .target(
             name: "AppTrackingTransparencyObjC",
             path: "ios/Plugin",
-            publicHeadersPath: ".",
             sources: [
                 "AppTrackingTransparencyPlugin.m",
                 "AppTrackingTransparencyPlugin.h"
-            ]
+            ],
+            publicHeadersPath: "."
         ),
         .target(
             name: "AppTrackingTransparencySwift",
