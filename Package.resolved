@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "capacitor-swift-pm",
+        "repositoryURL": "https://github.com/ionic-team/capacitor-swift-pm.git",
+        "state": {
+          "branch": null,
+          "revision": "ef3cfccd708da835ba6393bd40c578d251d623c2",
+          "version": "7.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
