@@ -1,34 +1,32 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.9
 import PackageDescription
 
 let package = Package(
-    name: "EnergyaspectsCapacitorPluginAppTrackingTransparency",
-    platforms: [
-        .iOS("14.0")
-    ],
+    name: "CapacitorPluginAppTrackingTransparency",
+    platforms: [.iOS(.v14)],
     products: [
         .library(
-            name: "EnergyaspectsCapacitorPluginAppTrackingTransparency",
-            targets: ["CapacitorPluginAppTrackingTransparency"]
-        )
-    ],
-    dependencies: [
-        .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", .exact("7.0.0"))
+            name: "CapacitorPluginAppTrackingTransparency",
+            targets: ["AppTrackingTransparencySwift"]
+        ),
     ],
     targets: [
         .target(
-            name: "CapacitorPluginAppTrackingTransparency",
-            dependencies: [
-                .product(name: "Capacitor", package: "capacitor-swift-pm")
-            ],
+            name: "AppTrackingTransparencyObjC",
             path: "ios/Plugin",
-            sources: ["AppTrackingTransparencyPlugin.swift", "AppTrackingTransparency.swift", "AppTrackingTransparencyPlugin.m"],
             publicHeadersPath: ".",
-            cSettings: [
-                .headerSearchPath(".")
-            ],
-            linkerSettings: [
-                .linkedFramework("AppTrackingTransparency")
+            sources: [
+                "AppTrackingTransparencyPlugin.m",
+                "AppTrackingTransparencyPlugin.h"
+            ]
+        ),
+        .target(
+            name: "AppTrackingTransparencySwift",
+            dependencies: ["AppTrackingTransparencyObjC"],
+            path: "ios/Plugin",
+            sources: [
+                "AppTrackingTransparency.swift",
+                "AppTrackingTransparencyPlugin.swift"
             ]
         )
     ]
